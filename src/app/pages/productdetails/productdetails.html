@@ -3,16 +3,16 @@
   @if (product) {
   <div class="row">
     <div class="col-lg-6">
-      <img [src]="product.image" alt="{{ product.title }}" class="img-fluid rounded" />
+      <img [src]="product.images" [alt]="product.title" class="img-fluid rounded shadow" />
     </div>
     <div class="col-lg-6">
-      <h1 class="fw-bold mb-3">{{ product.title }}</h1>
-      <p class="text-muted fs-5 mb-4">Category: {{ product.category }}</p>
+      <h1 class="fw-bold mb-3 text-primary">{{ product.title }}</h1>
+      <p class="text-muted fs-5 mb-4">Director: {{ product.category }}</p>
 
       <div class="mb-4">
-        <h3 class="text-primary fw-bold">${{ product.price }}</h3>
+        <h3 class="text-success fw-bold">Ticket Price: ${{ product.price }}</h3>
         <div class="d-flex align-items-center gap-2">
-          <span class="badge bg-success">Rating: {{ product.rating?.rate }}/5</span>
+          <span class="badge bg-warning text-dark">Rating: {{ product.rating?.rate }}/5</span>
           <span class="text-muted">({{ product.rating?.count }} reviews)</span>
         </div>
       </div>
@@ -22,14 +22,17 @@
       </p>
 
       <div class="d-flex gap-3">
-        <button class="btn btn-primary btn-lg flex-grow-1">Add to Cart</button>
-        <button class="btn btn-outline-secondary btn-lg flex-grow-1">Add to Wishlist</button>
+        <button class="btn btn-success btn-lg flex-grow-1">Book Now</button>
+        <button class="btn btn-outline-primary btn-lg flex-grow-1">Add to Wishlist</button>
       </div>
     </div>
   </div>
   } @else {
   <div class="text-center py-5">
-    <p class="text-muted fs-5">Loading product details...</p>
+    <div class="spinner-border text-light" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="text-light fs-5 mt-3">Loading movie details...</p>
   </div>
   }
 </div>

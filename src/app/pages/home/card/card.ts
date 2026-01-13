@@ -18,7 +18,7 @@ export class Card implements OnInit {
   ){}
 
   ngOnInit(): void {
-    this.api_service.getProducts().subscribe((data: any)=>{
+    this.api_service.getMovies().subscribe((data: any)=>{
     this.card=data;
     this.cdr.detectChanges();
   
@@ -26,6 +26,6 @@ export class Card implements OnInit {
 }
 
    veiwProductDetails(product: any){
-     this.router.navigate(['/product',product.id],{ state: { product }});
+     this.router.navigate(['/movie',product.id],{ state: { product }});
    }
 }

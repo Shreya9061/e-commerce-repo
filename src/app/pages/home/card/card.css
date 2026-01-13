@@ -1,0 +1,22 @@
+.card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #333;
+}
+
+.card-title {
+  color: #ffffff;
+}
+
+.card-text {
+  color: #cccccc;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
